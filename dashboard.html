@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Write Away - Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./css/reset.scss">
+    <link rel="stylesheet" href="./css/application.scss">
+    <link rel="stylesheet" href="./css/homepage.scss">
+    <link rel="stylesheet" href="./css/feed.scss">
+    <link rel="stylesheet" href="./css/dashboard.scss">
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- <script>
+    $( function() {
+      $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+        defaultDate: new Date()
+      });
+    } );
+    </script> -->
+
+  </head>
+  <body>
+    <div class="dashboard-container">
+
+      <nav class="nav-container">
+        <nav class="nav">
+          <h3><a href="./home.html" class="main-links">Write Away</a></h3>
+          <section class="nav-items">
+            <a href="./dashboard.html" class="main-links nav-items-links">Dashboard</a>
+            <a href="./feed.html" class="main-links nav-items-links">Feed</a>
+            <a href="./stats.html" class="main-links nav-items-links">Statistics</a>
+          </section>
+          <section class="nav-dropdown">
+            <div class="nav-dropdown-email">demouser@gmail.com <img src="./images/chevron-down.png" class="icons"></div>
+            <div class="nav-dropdown-content">
+              <a href="./settings.html" class="nav-dropdown-elements main-links">Settings</a>
+              <a href="#" class="nav-dropdown-elements main-links">Log Out</a>
+            </div>
+          </section>
+        </nav>
+      </nav>
+
+      <section class="dashboard-main-container">
+
+        <section class="dashboard-main-left">
+          <section class="dashboard-new-post">
+            <h2>Add an entry</h2>
+
+            <p>Date: <input type="text" id="datepicker"></p>
+
+            <p>Title: <input type="text"></p>
+
+            <textarea class="input-post" name="post" rows="8" cols="60" autofocus></textarea>
+            <br />
+            <button type="submit" name="submit-post">Submit!</button>
+          </section>
+          <section class="dashboard-graph">
+            <h2>Graphs</h2>
+            <p>Graph goes here</p>
+
+            <p><a href="./stats.html">More graphs...</a></p>
+          </section>
+        </section>
+
+        <section class="dashboard-main-right">
+          <section class="dashboard-calendar">
+            <h2>Calendar</h2>
+
+            <p>Calendar goes here</p>
+          </section>
+          <section class="dashboard-stats">
+            <h3>3 day streak - keep it up!</h3>
+          </section>
+        </section>
+
+      </section>
+
+      <footer class="footer-container">
+        <footer class="footer">
+          <a href="./contact.html" class="main-links">Contact</a>
+        </footer>
+      </footer>
+    </div>
+
+  </body>
+</html>

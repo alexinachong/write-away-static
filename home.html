@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Write Away</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="./css/reset.scss">
+    <link rel="stylesheet" href="./css/application.scss">
+    <link rel="stylesheet" href="./css/homepage.scss">
+    <link rel="stylesheet" href="./css/feed.scss">
+    <link rel="stylesheet" href="./css/dashboard.scss">
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  </head>
+  <body>
+    <div class="homepage-container">
+      <nav class="nav-container">
+        <nav class="nav">
+          <h3><a href="./home.html" class="main-links">Write Away</a></h3>
+        </nav>
+      </nav>
+
+      <section class="main-container">
+        <section class="main">
+          <section class="main-animation-container">
+            <h1 id="write-less" class="main-headers">Write Less.</h1>
+            <h1 id="remember-more" class="main-headers">Remember More.</h1>
+            <h1 id="write-away" class="main-headers">Write Away.</h1>
+            <h2 id="journaling">A low-commitment alternative to journaling</h2>
+          </section>
+
+
+          <div class="session-buttons-container">
+            <!-- <a href="#" class="session-buttons">Go!</a> -->
+            <a href="./feed.html" class="session-buttons">Sign Up</a>
+            <a href="./feed.html" class="session-buttons">Log In</a>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer-container">
+        <footer class="footer">
+          <a href="./contact.html" class="main-links">Contact</a>
+        </footer>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      const animationFadeIn = ' animated fadeInUp';
+      const animationFadeOut = ' animated fadeOutUp';
+      const animationAppear = ' animated fadeIn';
+      const animationPulse = ' animated pulse';
+      const animationEnd = 'webkitAnimationEnd mozAnimationEnd oAnimationEnd animationend';
+
+      $(window).load(function() {
+        $('#write-less').addClass(animationFadeIn).one(animationEnd, function() {
+          $('#write-less').removeClass(animationFadeIn);
+          $('#write-less').addClass(animationFadeOut);
+
+          $('#remember-more').addClass(animationFadeIn).one(animationEnd, function() {
+            $('#remember-more').removeClass(animationFadeIn);
+            $('#remember-more').addClass(animationFadeOut);
+
+            $('#write-away').addClass(animationFadeIn).one(animationEnd, function() {
+              $('#journaling').addClass(animationAppear).one(animationEnd, function() {
+                $('#journaling').removeClass(animationAppear);
+                $('#journaling').addClass(animationPulse);
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
